@@ -10,5 +10,7 @@
         public int VehicleTypeId { get; set; }
 
         public VehicleType VehicleType { get; set; }
+
+        public int NrOfWheels { get; set; }
     }
 }
