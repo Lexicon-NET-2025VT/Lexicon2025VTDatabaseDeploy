@@ -74,9 +74,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FCDD4B039BF546E4B3E9D1D3A3142047 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_750251A29FA64327BA454D9CBFF1D306 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BA64BE3648034A789703D1477E2A22DF }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2BDB2A211D994520B59E34012593CE2C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_09DDD707FED945D3A9A2E965C04C793D }}
+          subscription-id: ${{ AZUREAPPSERVICE_SUBSCRIPTIONID_632F581B063943759B64785C958F047B }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -91,3 +91,4 @@ jobs:
         with:
           connection-string: ${{ secrets.SQL_CONNECTION_STRING }}
           path: ./ddl-updates/sql-script.sql
+
