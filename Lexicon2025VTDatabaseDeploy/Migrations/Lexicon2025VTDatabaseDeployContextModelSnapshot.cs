@@ -33,9 +33,6 @@ namespace Lexicon2025VTDatabaseDeploy.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NrOfWheels")
-                        .HasColumnType("int");
-
                     b.Property<int>("VehicleTypeId")
                         .HasColumnType("int");
 
@@ -46,7 +43,7 @@ namespace Lexicon2025VTDatabaseDeploy.Migrations
 
                     b.HasIndex("VehicleTypeId");
 
-                    b.ToTable("Vehicles");
+                    b.ToTable("Vehicles", (string)null);
                 });
 
             modelBuilder.Entity("Lexicon2025VTDatabaseDeploy.Models.VehicleType", b =>
@@ -63,7 +60,7 @@ namespace Lexicon2025VTDatabaseDeploy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("VehicleTypes");
+                    b.ToTable("VehicleTypes", (string)null);
                 });
 
             modelBuilder.Entity("Lexicon2025VTDatabaseDeploy.Models.Vehicle", b =>
