@@ -76,7 +76,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2BDB2A211D994520B59E34012593CE2C }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_09DDD707FED945D3A9A2E965C04C793D }}
-          subscription-id: ${{ AZUREAPPSERVICE_SUBSCRIPTIONID_632F581B063943759B64785C958F047B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_632F581B063943759B64785C958F047B }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -91,4 +91,5 @@ jobs:
         with:
           connection-string: ${{ secrets.SQL_CONNECTION_STRING }}
           path: ./ddl-updates/sql-script.sql
+
 
